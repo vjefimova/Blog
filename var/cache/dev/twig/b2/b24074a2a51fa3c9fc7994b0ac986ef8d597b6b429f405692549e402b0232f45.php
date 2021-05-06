@@ -121,13 +121,17 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
             // line 23
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 23)]), "html", null, true);
             echo "\">edit</a>
+                    <a href=\"";
+            // line 24
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 24)]), "html", null, true);
+            echo "\">delete</a>
                 </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 27
+            // line 28
             echo "            <tr>
                 <td colspan=\"3\">no records found</td>
             </tr>
@@ -136,12 +140,12 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 32
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 34
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_new");
         echo "\">Create new</a>
 ";
@@ -165,7 +169,7 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
 
     public function getDebugInfo()
     {
-        return array (  145 => 34,  140 => 31,  131 => 27,  122 => 23,  118 => 22,  113 => 20,  109 => 19,  106 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  149 => 35,  144 => 32,  135 => 28,  126 => 24,  122 => 23,  118 => 22,  113 => 20,  109 => 19,  106 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -193,6 +197,7 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
                 <td>
                     <a href=\"{{ path('comment_show', {'id': comment.id}) }}\">show</a>
                     <a href=\"{{ path('comment_edit', {'id': comment.id}) }}\">edit</a>
+                    <a href=\"{{ path('comment_delete', {'id': comment.id}) }}\">delete</a>
                 </td>
             </tr>
         {% else %}
