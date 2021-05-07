@@ -106,7 +106,6 @@ class __TwigTemplate_7092303a6a3974511abc9311900148a341ccf56b964f9c257672fed00e8
 
                 <section class=\"mb-5\">
                     <div class=\"card bg-light\">
-                        <a href=\"/comment\">show</a>
                     </div>
                 </section>
             </div>
@@ -114,16 +113,16 @@ class __TwigTemplate_7092303a6a3974511abc9311900148a341ccf56b964f9c257672fed00e8
     </div>
 
     <a href=\"";
-        // line 28
+        // line 27
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 30, $this->source); })()), "id", [], "any", false, false, false, 30)]), "html", null, true);
+        // line 29
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 29, $this->source); })()), "id", [], "any", false, false, false, 29)]), "html", null, true);
         echo "\">edit</a>
     ";
-        // line 31
+        // line 30
         echo twig_include($this->env, $context, "post/_delete_form.html.twig");
         echo "
 
@@ -148,7 +147,7 @@ class __TwigTemplate_7092303a6a3974511abc9311900148a341ccf56b964f9c257672fed00e8
 
     public function getDebugInfo()
     {
-        return array (  127 => 31,  123 => 30,  118 => 28,  102 => 15,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  126 => 30,  122 => 29,  117 => 27,  102 => 15,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,7 +172,6 @@ class __TwigTemplate_7092303a6a3974511abc9311900148a341ccf56b964f9c257672fed00e8
 
                 <section class=\"mb-5\">
                     <div class=\"card bg-light\">
-                        <a href=\"/comment\">show</a>
                     </div>
                 </section>
             </div>

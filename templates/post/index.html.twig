@@ -3,21 +3,39 @@
 {% block title %}Post index{% endblock %}
 
 {% block body %}
-<div class="container mt-5">
-    <header class="mb-4">
-        <h1 class="fw-bolder mb-2">Blog posts</h1>
-    </header>
+<div class="container ">
+    <div class="row">
+        <div class="col-md-8">
+            <header class="mb-4">
+                <h1 class="fw-bolder mb-2">Blog posts</h1>
+            </header>
 
-    <a href="{{ path('post_new') }}" class="btn btn-primary">Create new</a>
+            <a href="{{ path('post_new') }}" class="btn btn-primary mb-3">Create new</a>
 
-    {% for post in posts %}
-    <div class="list-group list-group-flush">
-        <a href="{{ path('post_show', {'id': post.id}) }}" class="btn list-group-item list-group-item-action">{{ post.title }}</a >
+            {% for post in posts %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <a class="btn btn-primary" href="{{ path('post_show', {'id': post.id}) }}">Read More →</a>
+                </div>
+            </div>
+            {% else %}
+            <div class="list-group list-group-flush">
+                <a class=" btn list-group-item list-group-item-action">no records found</a >
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            <div class="card my-4">
+                <h5 class="card-header">Search</h5>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Search for..." />
+                        <span class="input-group-append"><button class="btn btn-secondary" type="button">Go!</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    {% else %}
-    <div class="list-group list-group-flush">
-        <a class=" btn list-group-item list-group-item-action">no records found</a >
-    </div>
-    {% endfor %}
 </div>   
 {% endblock %}

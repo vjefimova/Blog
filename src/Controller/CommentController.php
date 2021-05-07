@@ -58,6 +58,14 @@ class CommentController extends AbstractController
         ]);
     }
 
+    public function BlogpostsComments($postId): Response
+    {
+        $comment = new Comment();
+        return $this->render('comment/index.html.twig', [
+            'comment' => $comment = findBy(['post_id'=>$postId]),
+        ]);
+    }
+
     /**
      * @Route("/{id}/edit", name="comment_edit", methods={"GET","POST"})
      */
