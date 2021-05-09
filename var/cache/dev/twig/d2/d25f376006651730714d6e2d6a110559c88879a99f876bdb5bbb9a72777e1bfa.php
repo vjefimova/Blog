@@ -91,28 +91,33 @@ class __TwigTemplate_c127cccab5b311c6f5fa8b8641a74923be79e18cf09b96ea8aba03a8e97
             <header class=\"mb-4\">
                 <h1 class=\"fw-bolder mb-2\">Blog posts</h1>
             </header>
-
-            <a href=\"";
-        // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_new");
-        echo "\" class=\"btn btn-primary mb-3\">Create new</a>
-
             ";
+        // line 12
+        if ((0 === twig_compare($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"), true))) {
+            // line 13
+            echo "            <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_new");
+            echo "\" class=\"btn btn-primary mb-3\">Create new</a>
+            ";
+        }
         // line 15
+        echo "
+            ";
+        // line 16
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 15, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 16, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
-            // line 16
+            // line 17
             echo "            <div class=\"card mb-4\">
                 <div class=\"card-body\">
                     <h2 class=\"card-title\">";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "title", [], "any", false, false, false, 18), "html", null, true);
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "title", [], "any", false, false, false, 19), "html", null, true);
             echo "</h2>
                     <a class=\"btn btn-primary\" href=\"";
-            // line 19
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_show", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 19)]), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_show", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 20)]), "html", null, true);
             echo "\">Read More →</a>
                 </div>
             </div>
@@ -120,7 +125,7 @@ class __TwigTemplate_c127cccab5b311c6f5fa8b8641a74923be79e18cf09b96ea8aba03a8e97
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 23
+            // line 24
             echo "            <div class=\"list-group list-group-flush\">
                 <a class=\" btn list-group-item list-group-item-action\">no records found</a >
             </div>
@@ -129,7 +134,7 @@ class __TwigTemplate_c127cccab5b311c6f5fa8b8641a74923be79e18cf09b96ea8aba03a8e97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
+        // line 28
         echo "        </div>
         <div class=\"col-md-4\">
             <div class=\"card my-4\">
@@ -165,7 +170,7 @@ class __TwigTemplate_c127cccab5b311c6f5fa8b8641a74923be79e18cf09b96ea8aba03a8e97
 
     public function getDebugInfo()
     {
-        return array (  133 => 27,  124 => 23,  115 => 19,  111 => 18,  107 => 16,  102 => 15,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  138 => 28,  129 => 24,  120 => 20,  116 => 19,  112 => 17,  107 => 16,  104 => 15,  98 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -181,8 +186,9 @@ class __TwigTemplate_c127cccab5b311c6f5fa8b8641a74923be79e18cf09b96ea8aba03a8e97
             <header class=\"mb-4\">
                 <h1 class=\"fw-bolder mb-2\">Blog posts</h1>
             </header>
-
+            {% if is_granted('ROLE_ADMIN') == true%}
             <a href=\"{{ path('post_new') }}\" class=\"btn btn-primary mb-3\">Create new</a>
+            {% endif %}
 
             {% for post in posts %}
             <div class=\"card mb-4\">

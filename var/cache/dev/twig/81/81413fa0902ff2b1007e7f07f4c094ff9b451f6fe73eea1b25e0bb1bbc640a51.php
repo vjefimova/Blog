@@ -88,65 +88,68 @@ class __TwigTemplate_9ba3d2f8fa9d5cdf04215f154e4b7d8e6117be12008fa4da3c91b6c8005
         echo "<div class=\"container\">
     <div class=\"row\">
         <div class=\"col-md-6\">
-                <form method=\"post\" class=\"box px-5 p-3\">
-                    ";
+            <form method=\"post\" class=\"box px-5 p-3\">
+                ";
         // line 10
         if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 10, $this->source); })())) {
             // line 11
-            echo "                        <div class=\"alert alert-danger\">";
+            echo "                    <div class=\"alert alert-danger\">";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 11, $this->source); })()), "messageKey", [], "any", false, false, false, 11), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 11, $this->source); })()), "messageData", [], "any", false, false, false, 11), "security"), "html", null, true);
             echo "</div>
-                    ";
+                ";
         }
         // line 13
         echo "
-                    ";
+                ";
         // line 14
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14)) {
             // line 15
-            echo "                        <div class=\"mb-3\">
-                            You are logged in as ";
+            echo "                    <div class=\"mb-3\">
+                        You are logged in as ";
             // line 16
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "username", [], "any", false, false, false, 16), "html", null, true);
             echo ", <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
-                        </div>
-                    ";
+                    </div>
+                ";
         }
         // line 19
         echo "
-                    <header class=\"mb-4\">
-                        <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-                    </header>
+                <header class=\"mb-4\">
+                    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+                </header>
 
-                    <p class=\"text-muted\"> Please enter your login and password!</p>
-                    <div class=\"mb-3\">
-                        <label for=\"inputEmail\" class=\"form-label\">Email</label>
-                        <input type=\"email\" value=\"";
+                <p class=\"text-muted\"> Please enter your login and password!</p>
+                <div class=\"mb-3\">
+                    <label for=\"inputEmail\" class=\"form-label\">Email</label>
+                    <input type=\"email\" value=\"";
         // line 27
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 27, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-                    </div>
+                </div>
 
-                    <div class=\"mb-3\">
-                        <label for=\"inputPassword\" class=\"form-label\">Password</label>
-                        <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-                    </div>
-                    <input type=\"hidden\" name=\"_csrf_token\"
-                        value=\"";
+                <div class=\"mb-3\">
+                    <label for=\"inputPassword\" class=\"form-label\">Password</label>
+                    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+                </div>
+                <input type=\"hidden\" name=\"_csrf_token\"
+                    value=\"";
         // line 35
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
-                    >
+                >
 
                     ";
         // line 48
         echo "
-                    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-                        Sign in
-                    </button>
-                </form>
+                <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+                    Sign in
+                </button>
+                <div class=\"mb-3\">
+                    <a class=\"text\" href=\"/register\"> Create account</a>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -184,34 +187,34 @@ class __TwigTemplate_9ba3d2f8fa9d5cdf04215f154e4b7d8e6117be12008fa4da3c91b6c8005
 <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-md-6\">
-                <form method=\"post\" class=\"box px-5 p-3\">
-                    {% if error %}
-                        <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                    {% endif %}
+            <form method=\"post\" class=\"box px-5 p-3\">
+                {% if error %}
+                    <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
 
-                    {% if app.user %}
-                        <div class=\"mb-3\">
-                            You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
-                        </div>
-                    {% endif %}
-
-                    <header class=\"mb-4\">
-                        <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-                    </header>
-
-                    <p class=\"text-muted\"> Please enter your login and password!</p>
+                {% if app.user %}
                     <div class=\"mb-3\">
-                        <label for=\"inputEmail\" class=\"form-label\">Email</label>
-                        <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
+                        You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
                     </div>
+                {% endif %}
 
-                    <div class=\"mb-3\">
-                        <label for=\"inputPassword\" class=\"form-label\">Password</label>
-                        <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-                    </div>
-                    <input type=\"hidden\" name=\"_csrf_token\"
-                        value=\"{{ csrf_token('authenticate') }}\"
-                    >
+                <header class=\"mb-4\">
+                    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+                </header>
+
+                <p class=\"text-muted\"> Please enter your login and password!</p>
+                <div class=\"mb-3\">
+                    <label for=\"inputEmail\" class=\"form-label\">Email</label>
+                    <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
+                </div>
+
+                <div class=\"mb-3\">
+                    <label for=\"inputPassword\" class=\"form-label\">Password</label>
+                    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+                </div>
+                <input type=\"hidden\" name=\"_csrf_token\"
+                    value=\"{{ csrf_token('authenticate') }}\"
+                >
 
                     {#
                         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -224,10 +227,13 @@ class __TwigTemplate_9ba3d2f8fa9d5cdf04215f154e4b7d8e6117be12008fa4da3c91b6c8005
                         </div>
                     #}
 
-                    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-                        Sign in
-                    </button>
-                </form>
+                <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+                    Sign in
+                </button>
+                <div class=\"mb-3\">
+                    <a class=\"text\" href=\"/register\"> Create account</a>
+                </div>
+            </form>
         </div>
     </div>
 </div>
