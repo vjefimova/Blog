@@ -85,17 +85,25 @@ class __TwigTemplate_f4f7a104e75d5ea3a72b9a2d1bcc5e79637cfe353a2a7759dd707055ed1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Comment</h1>
-
-    ";
-        // line 8
+        echo "<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-md-13\">
+            <header class=\"px-5 p-3\">
+                <h1>Create new Comment</h1>
+            </header>
+            <div class=\"mb-3\">
+                ";
+        // line 13
         echo twig_include($this->env, $context, "comment/_form.html.twig");
         echo "
-
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_index");
-        echo "\">back to list</a>
+                <a href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_index");
+        echo "\" class=\"btn btn-primary mb-3\">back to blog posts</a>
+            </div>
+        </div>
+    </div>
+</div> 
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +125,7 @@ class __TwigTemplate_f4f7a104e75d5ea3a72b9a2d1bcc5e79637cfe353a2a7759dd707055ed1
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -127,11 +135,19 @@ class __TwigTemplate_f4f7a104e75d5ea3a72b9a2d1bcc5e79637cfe353a2a7759dd707055ed1
 {% block title %}New Comment{% endblock %}
 
 {% block body %}
-    <h1>Create new Comment</h1>
-
-    {{ include('comment/_form.html.twig') }}
-
-    <a href=\"{{ path('comment_index') }}\">back to list</a>
+<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-md-13\">
+            <header class=\"px-5 p-3\">
+                <h1>Create new Comment</h1>
+            </header>
+            <div class=\"mb-3\">
+                {{ include('comment/_form.html.twig') }}
+                <a href=\"{{ path('post_index') }}\" class=\"btn btn-primary mb-3\">back to blog posts</a>
+            </div>
+        </div>
+    </div>
+</div> 
 {% endblock %}
 ", "comment/new.html.twig", "C:\\Users\\morgo\\Desktop\\Bidrento\\Blog\\templates\\comment\\new.html.twig");
     }

@@ -17,18 +17,15 @@
                     </section>
                 </article>
 
-                <a class="btn btn-lg btn-primary" href="{{ path('post_index') }}">back to list</a>
-
                 <div>
                 {% if is_granted('ROLE_ADMIN') == true%}
                     <a class="btn" href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
                     {{ include('post/_delete_form.html.twig') }}
                 {% endif %}
                 </div>
-
+                <hr>
                 <section class="mb-5">
-                    <div class="card bg-light">
-                    </div>
+                    <a class="btn btn-lg btn-primary" href="/comment/new">Add comment</a>
                 </section>
             </div>
         </div>

@@ -31,6 +31,7 @@ class CommentController extends AbstractController
     public function new(Request $request): Response
     {
         $comment = new Comment();
+        $comment->setUser($this->getUser());
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
 

@@ -92,38 +92,43 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
             <tr>
                 <th>Id</th>
                 <th>Content</th>
+                <th>user</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 17
+        // line 18
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 17, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 18, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 18
+            // line 19
             echo "            <tr>
                 <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 19), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 20), "html", null, true);
             echo "</td>
                 <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "content", [], "any", false, false, false, 20), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "content", [], "any", false, false, false, 21), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "user", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_show", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            // line 24
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_show", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 24)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 23)]), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             echo "\">edit</a>
                     <a href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 24)]), "html", null, true);
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 26)]), "html", null, true);
             echo "\">delete</a>
                 </td>
             </tr>
@@ -131,7 +136,7 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 28
+            // line 30
             echo "            <tr>
                 <td colspan=\"3\">no records found</td>
             </tr>
@@ -140,12 +145,12 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 34
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 35
+        // line 37
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_new");
         echo "\">Create new</a>
 ";
@@ -169,7 +174,7 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
 
     public function getDebugInfo()
     {
-        return array (  149 => 35,  144 => 32,  135 => 28,  126 => 24,  122 => 23,  118 => 22,  113 => 20,  109 => 19,  106 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  154 => 37,  149 => 34,  140 => 30,  131 => 26,  127 => 25,  123 => 24,  118 => 22,  114 => 21,  110 => 20,  107 => 19,  102 => 18,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -186,6 +191,7 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
             <tr>
                 <th>Id</th>
                 <th>Content</th>
+                <th>user</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -194,6 +200,7 @@ class __TwigTemplate_e993f5aedc2548b39539999582c7a8d8573ad90588f3a3265495b4da52f
             <tr>
                 <td>{{ comment.id }}</td>
                 <td>{{ comment.content }}</td>
+                <td>{{ comment.user }}</td>
                 <td>
                     <a href=\"{{ path('comment_show', {'id': comment.id}) }}\">show</a>
                     <a href=\"{{ path('comment_edit', {'id': comment.id}) }}\">edit</a>

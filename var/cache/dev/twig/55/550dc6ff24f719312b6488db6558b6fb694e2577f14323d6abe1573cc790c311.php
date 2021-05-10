@@ -108,31 +108,25 @@ class __TwigTemplate_7092303a6a3974511abc9311900148a341ccf56b964f9c257672fed00e8
                     </section>
                 </article>
 
-                <a class=\"btn btn-lg btn-primary\" href=\"";
-        // line 20
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_index");
-        echo "\">back to list</a>
-
                 <div>
                 ";
-        // line 23
+        // line 21
         if ((0 === twig_compare($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"), true))) {
-            // line 24
+            // line 22
             echo "                    <a class=\"btn\" href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 24, $this->source); })()), "id", [], "any", false, false, false, 24)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 22, $this->source); })()), "id", [], "any", false, false, false, 22)]), "html", null, true);
             echo "\">edit</a>
                     ";
-            // line 25
+            // line 23
             echo twig_include($this->env, $context, "post/_delete_form.html.twig");
             echo "
                 ";
         }
-        // line 27
+        // line 25
         echo "                </div>
-
+                <hr>
                 <section class=\"mb-5\">
-                    <div class=\"card bg-light\">
-                    </div>
+                    <a class=\"btn btn-lg btn-primary\" href=\"/comment/new\">Add comment</a>
                 </section>
             </div>
         </div>
@@ -159,7 +153,7 @@ class __TwigTemplate_7092303a6a3974511abc9311900148a341ccf56b964f9c257672fed00e8
 
     public function getDebugInfo()
     {
-        return array (  131 => 27,  126 => 25,  121 => 24,  119 => 23,  113 => 20,  106 => 16,  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  126 => 25,  121 => 23,  116 => 22,  114 => 21,  106 => 16,  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -183,18 +177,15 @@ class __TwigTemplate_7092303a6a3974511abc9311900148a341ccf56b964f9c257672fed00e8
                     </section>
                 </article>
 
-                <a class=\"btn btn-lg btn-primary\" href=\"{{ path('post_index') }}\">back to list</a>
-
                 <div>
                 {% if is_granted('ROLE_ADMIN') == true%}
                     <a class=\"btn\" href=\"{{ path('post_edit', {'id': post.id}) }}\">edit</a>
                     {{ include('post/_delete_form.html.twig') }}
                 {% endif %}
                 </div>
-
+                <hr>
                 <section class=\"mb-5\">
-                    <div class=\"card bg-light\">
-                    </div>
+                    <a class=\"btn btn-lg btn-primary\" href=\"/comment/new\">Add comment</a>
                 </section>
             </div>
         </div>

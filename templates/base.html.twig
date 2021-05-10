@@ -23,12 +23,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/post">Blog posts</a>
                     </li>
+                    <li>
+                        {% if is_granted('ROLE_ADMIN') == true%}
+                            <a class="nav-link" href="/comment">Comments</a>
+                        {% endif %}
+                    </li>
                     <li class="nav-item">
                         {% if app.user is empty%}
                         <a class="nav-link" href="/login">Login</a>
                         {% else %}
-                        <span class="nav-link">You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a></span>
-                        
+                        <span class="nav-link">You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a></span>  
                         {% endif %}
                     </li>
                 </ul>

@@ -103,21 +103,28 @@ class __TwigTemplate_6df4c20420a6b8a2a4c57aa578ae44286d377bb702dedfcab578d9807a6
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 16, $this->source); })()), "content", [], "any", false, false, false, 16), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <th>User</th>
+                <td>";
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "html", null, true);
+        echo "</td>
+            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 21
+        // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 23
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 23, $this->source); })()), "id", [], "any", false, false, false, 23)]), "html", null, true);
+        // line 27
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 25
+        // line 29
         echo twig_include($this->env, $context, "comment/_delete_form.html.twig");
         echo "
 ";
@@ -141,7 +148,7 @@ class __TwigTemplate_6df4c20420a6b8a2a4c57aa578ae44286d377bb702dedfcab578d9807a6
 
     public function getDebugInfo()
     {
-        return array (  121 => 25,  116 => 23,  111 => 21,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  128 => 29,  123 => 27,  118 => 25,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -162,6 +169,10 @@ class __TwigTemplate_6df4c20420a6b8a2a4c57aa578ae44286d377bb702dedfcab578d9807a6
             <tr>
                 <th>Content</th>
                 <td>{{ comment.content }}</td>
+            </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ comment.user }}</td>
             </tr>
         </tbody>
     </table>

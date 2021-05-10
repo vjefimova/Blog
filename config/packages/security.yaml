@@ -43,4 +43,5 @@ security:
          - { path: ^/post/new, roles: ROLE_ADMIN }
          - { path: ^post_edit, roles: ROLE_ADMIN }
          - { path: ^post_delete, roles: ROLE_ADMIN }
+         - { path: ^/comment, roles: ROLE_ADMIN }
          - { path: ^/profile, roles: ROLE_USER }

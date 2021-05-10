@@ -141,8 +141,9 @@ class __TwigTemplate_c127cccab5b311c6f5fa8b8641a74923be79e18cf09b96ea8aba03a8e97
                 <h5 class=\"card-header\">Search</h5>
                 <div class=\"card-body\">
                     <div class=\"input-group\">
-                        <input class=\"form-control\" type=\"text\" placeholder=\"Search for...\" />
-                        <span class=\"input-group-append\"><button class=\"btn btn-secondary\" type=\"button\">Go!</button></span>
+                            <input class=\"form-control\" type=\"text\" name=\"search\" placeholder=\"Search for...\" />
+                            <span class=\"input-group-append\"><button class=\"btn btn-secondary\" type=\"button\" >Go!</button></span>
+                        
                     </div>
                 </div>
             </div>
@@ -208,8 +209,9 @@ class __TwigTemplate_c127cccab5b311c6f5fa8b8641a74923be79e18cf09b96ea8aba03a8e97
                 <h5 class=\"card-header\">Search</h5>
                 <div class=\"card-body\">
                     <div class=\"input-group\">
-                        <input class=\"form-control\" type=\"text\" placeholder=\"Search for...\" />
-                        <span class=\"input-group-append\"><button class=\"btn btn-secondary\" type=\"button\">Go!</button></span>
+                            <input class=\"form-control\" type=\"text\" name=\"search\" placeholder=\"Search for...\" />
+                            <span class=\"input-group-append\"><button class=\"btn btn-secondary\" type=\"button\" >Go!</button></span>
+                        
                     </div>
                 </div>
             </div>
