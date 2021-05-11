@@ -25,4 +25,8 @@ You will see it
 ![image](https://user-images.githubusercontent.com/60796360/117777327-2b11b380-b245-11eb-92da-09e1a9996b05.png)
 
 To check what the admin can do, the login **admin@email.com** and the password **admin**.
+Through the menu you can get to the page where all the comments to the posts will be. There will be a button on the main page to add a new post.
+
+
 To check what a regular user can do, you can create your own user.
+To leave a comment, you need to go to any post and there will be a button to add a comment.
