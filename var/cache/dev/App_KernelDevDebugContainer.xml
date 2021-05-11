@@ -4841,6 +4841,13 @@
         <argument>null</argument>
       </call>
       <call method="add">
+        <argument type="service" id=".security.request_matcher.YNviKaM"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
         <argument type="service" id=".security.request_matcher.Pn7yvdV"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
@@ -5300,6 +5307,9 @@
     </service>
     <service id=".security.request_matcher..dgLGhX" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^post_delete</argument>
+    </service>
+    <service id=".security.request_matcher.YNviKaM" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/comment</argument>
     </service>
     <service id=".security.request_matcher.Pn7yvdV" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^/profile</argument>

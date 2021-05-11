@@ -85,22 +85,34 @@ class __TwigTemplate_4e552fe75950feb0a1336124b203395306aaa8d27f848fce3ed05acac1c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit Comment</h1>
-
-    ";
-        // line 8
+        echo "<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-md-13\">
+            <header class=\"px-5 p-3\">
+                <h1>Edit Comment</h1>
+            </header>
+            <div class=\"mb-3\">
+                ";
+        // line 13
         echo twig_include($this->env, $context, "comment/_form.html.twig", ["button_label" => "Update"]);
         echo "
+            </div>
 
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_index");
-        echo "\">back to list</a>
-
-    ";
-        // line 12
+             <div class=\"mb-3\">
+                ";
+        // line 17
         echo twig_include($this->env, $context, "comment/_delete_form.html.twig");
         echo "
+            </div>
+
+            <a class=\"btn btn-primary\" href=\"";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_index");
+        echo "\">back to list</a>
+            </div>
+        </div>
+    </div>
+</div>  
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +134,7 @@ class __TwigTemplate_4e552fe75950feb0a1336124b203395306aaa8d27f848fce3ed05acac1c
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  110 => 20,  104 => 17,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -132,13 +144,25 @@ class __TwigTemplate_4e552fe75950feb0a1336124b203395306aaa8d27f848fce3ed05acac1c
 {% block title %}Edit Comment{% endblock %}
 
 {% block body %}
-    <h1>Edit Comment</h1>
+<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-md-13\">
+            <header class=\"px-5 p-3\">
+                <h1>Edit Comment</h1>
+            </header>
+            <div class=\"mb-3\">
+                {{ include('comment/_form.html.twig', {'button_label': 'Update'}) }}
+            </div>
 
-    {{ include('comment/_form.html.twig', {'button_label': 'Update'}) }}
+             <div class=\"mb-3\">
+                {{ include('comment/_delete_form.html.twig') }}
+            </div>
 
-    <a href=\"{{ path('comment_index') }}\">back to list</a>
-
-    {{ include('comment/_delete_form.html.twig') }}
+            <a class=\"btn btn-primary\" href=\"{{ path('comment_index') }}\">back to list</a>
+            </div>
+        </div>
+    </div>
+</div>  
 {% endblock %}
 ", "comment/edit.html.twig", "C:\\Users\\morgo\\Desktop\\Bidrento\\Blog\\templates\\comment\\edit.html.twig");
     }

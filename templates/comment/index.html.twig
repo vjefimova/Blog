@@ -3,34 +3,29 @@
 {% block title %}Comment index{% endblock %}
 
 {% block body %}
-    <h1>Comment index</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <header class="mb-4">
+                <h1>Comments</h1>
+            </header>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Content</th>
-                <th>user</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for comment in comments %}
-            <tr>
-                <td>{{ comment.id }}</td>
-                <td>{{ comment.content }}</td>
-                <td>{{ comment.user }}</td>
-                <td>
-                    <a href="{{ path('comment_show', {'id': comment.id}) }}">show</a>
+            <ul class="list-group">
+            {% for comment in comments %}
+                <li class="list-group-item"><a href="{{ path('comment_show', {'id': comment.id}) }}">show</a>
                     <a href="{{ path('comment_edit', {'id': comment.id}) }}">edit</a>
-                    <a href="{{ path('comment_delete', {'id': comment.id}) }}">delete</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                    <a href="{{ path('comment_delete', {'id': comment.id}) }}">delete</a><br/>
+                    {% if comment.user is empty%}
+                        User: Anonymous
+                    {% else %}
+                        User: {{ comment.user }}
+                    {% endif %}
+                    <br/> Blog post: {{ comment.post }}
+                    <br/> {{ comment.content }} </li>
+            {% else %}
+            <li class="list-group-item">no records found</li>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}

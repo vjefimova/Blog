@@ -47,7 +47,7 @@ class __TwigTemplate_681cf21a8afecfffe3fe70ed527245aac56d702424c4a9d5fcb7c586bcb
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-primary\">Delete</button>
 </form>
 ";
         
@@ -77,7 +77,7 @@ class __TwigTemplate_681cf21a8afecfffe3fe70ed527245aac56d702424c4a9d5fcb7c586bcb
     {
         return new Source("<form method=\"post\" action=\"{{ path('comment_delete', {'id': comment.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ comment.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-primary\">Delete</button>
 </form>
 ", "comment/_delete_form.html.twig", "C:\\Users\\morgo\\Desktop\\Bidrento\\Blog\\templates\\comment\\_delete_form.html.twig");
     }

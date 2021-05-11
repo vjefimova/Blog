@@ -85,48 +85,41 @@ class __TwigTemplate_6df4c20420a6b8a2a4c57aa578ae44286d377bb702dedfcab578d9807a6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Comment</h1>
+        echo "
+<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-md-6\">
+            <header class=\"mb-4\">
+                <h1>Comment</h1>
+            </header>
 
-    <table class=\"table\">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 16, $this->source); })()), "content", [], "any", false, false, false, 16), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>User</th>
-                <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "html", null, true);
-        echo "</td>
-            </tr>
-        </tbody>
-    </table>
+            <section class=\"mb-5\">
+                <p class=\"fs-5 mb-4\">";
+        // line 15
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "html", null, true);
+        echo "</p>
+            </section>
 
-    <a href=\"";
+            <section class=\"mb-5\">
+                <p class=\"fs-5 mb-4\">";
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 19, $this->source); })()), "content", [], "any", false, false, false, 19), "html", null, true);
+        echo "</p>
+            </section>
+
+            <section class=\"mb-5\">
+                ";
+        // line 23
+        echo twig_include($this->env, $context, "comment/_delete_form.html.twig");
+        echo "
+            </section>
+            <a class=\"btn btn-lg btn-primary\" href=\"";
         // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_index");
         echo "\">back to list</a>
-
-    <a href=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
-        echo "\">edit</a>
-
-    ";
-        // line 29
-        echo twig_include($this->env, $context, "comment/_delete_form.html.twig");
-        echo "
+        </div>
+    </div>
+</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -148,7 +141,7 @@ class __TwigTemplate_6df4c20420a6b8a2a4c57aa578ae44286d377bb702dedfcab578d9807a6
 
     public function getDebugInfo()
     {
-        return array (  128 => 29,  123 => 27,  118 => 25,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  118 => 25,  113 => 23,  106 => 19,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -158,30 +151,29 @@ class __TwigTemplate_6df4c20420a6b8a2a4c57aa578ae44286d377bb702dedfcab578d9807a6
 {% block title %}Comment{% endblock %}
 
 {% block body %}
-    <h1>Comment</h1>
 
-    <table class=\"table\">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ comment.id }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ comment.content }}</td>
-            </tr>
-            <tr>
-                <th>User</th>
-                <td>{{ comment.user }}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-md-6\">
+            <header class=\"mb-4\">
+                <h1>Comment</h1>
+            </header>
 
-    <a href=\"{{ path('comment_index') }}\">back to list</a>
+            <section class=\"mb-5\">
+                <p class=\"fs-5 mb-4\">{{ comment.user }}</p>
+            </section>
 
-    <a href=\"{{ path('comment_edit', {'id': comment.id}) }}\">edit</a>
+            <section class=\"mb-5\">
+                <p class=\"fs-5 mb-4\">{{ comment.content }}</p>
+            </section>
 
-    {{ include('comment/_delete_form.html.twig') }}
+            <section class=\"mb-5\">
+                {{ include('comment/_delete_form.html.twig') }}
+            </section>
+            <a class=\"btn btn-lg btn-primary\" href=\"{{ path('comment_index') }}\">back to list</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
 ", "comment/show.html.twig", "C:\\Users\\morgo\\Desktop\\Bidrento\\Blog\\templates\\comment\\show.html.twig");
     }
